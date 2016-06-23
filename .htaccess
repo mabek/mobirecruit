@@ -1,0 +1,23 @@
+#Rewrite-Engine-Konfiguration
+#Hier werden Alias-Adressen erzeugt und Verzeichnisse geschuetzt
+#Version: 0.0.3
+
+#Engine aktivieren
+RewriteEngine  	on
+RewriteBase    	/
+
+#Aliase
+RewriteRule 	^logincontroller 	/mobirecruit/index.php [QSA,L]
+RewriteRule 	^maincontroller 	/mobirecruit/controller.php [QSA,L]
+RewriteRule 	^bewerbercontroller /mobirecruit/controller_bewerber.php [QSA,L]
+RewriteRule 	^stellencontroller 	/mobirecruit/controller_stellen.php [QSA,L]
+RewriteRule 	^applicationcontroller 	/mobirecruit/controller_applications.php [QSA,L]
+RewriteRule 	^eventcontroller 	/mobirecruit/controller_event.php [QSA,L]
+RewriteRule 	^workflowcontroller /mobirecruit/controller_workflow.php [QSA,L]
+
+
+#Verzeichnisschutz
+RewriteRule     ^inc(.*) /mobirecruit/index.php [QSA,L]	
+RewriteRule 	^lib(.*) /mobirecruit/index.php [QSA,L]
+RewriteRule		^model(.*) /mobirecruit/index.php [QSA,L]
+RewriteRule		^tpl(.*) /mobirecruit/index.php [QSA,L]
